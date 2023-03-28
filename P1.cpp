@@ -71,10 +71,10 @@ int main() {
    while (player_wickets > 0 && balls_left > 0) {
       int player_input;
 
-      cout << "Enter your run from 1 to 6: ";
+      cout << "Enter your run from 0 to 6: ";
       cin >> player_input;
 
-      if (player_input < 1 || player_input > 6) {
+      if (player_input < 0 || player_input > 6) {
          cout << "Invalid run. Please enter a number from 1 to 6.\n";
          continue;
       }
@@ -87,6 +87,30 @@ int main() {
          player_wickets--;
       } else {
          player_run += player_input;
+
+         switch (player_input) {
+            case 0:
+               cout << "What a defense by the batsman!\n";
+               break;
+            case 1:
+               cout << "A defensive shot by the batsman and they take off for a single.\n";
+               break;
+            case 2:
+               cout << "Good running between the wickets! The batsmen are pushing hard and come back for two.\n";
+               break;
+            case 3:
+               cout << "A well-placed shot into the gap and the batsmen run hard for three.\n";
+               break;
+            case 4:
+               cout << "Cracking shot! The ball races away to the boundary for a four.\n";
+               break;
+            case 5:
+               cout << "Oh, the ball's gone past the wicket-keeper! That's 5 bonus runs for the batting team!\n";
+               break;
+            case 6:
+               cout << "That's a massive hit! The ball sails over the boundary for a six.\n";
+               break;
+         }
       }
       balls_left--;
 
@@ -109,10 +133,10 @@ int main() {
    while (computer_wickets > 0 && balls_left > 0 && computer_run < target) {
       int player_input;
 
-      cout << "Enter your run from 1 to 6: ";
+      cout << "Enter your run from 0 to 6: ";
       cin >> player_input;
 
-      if (player_input < 1 || player_input > 6) {
+      if (player_input < 0 || player_input > 6) {
          cout << "Invalid run. Please enter a number from 1 to 6.\n";
          continue;
       }
@@ -125,6 +149,30 @@ int main() {
          computer_wickets--;
       } else {
          computer_run += computer_input;
+
+         switch (player_input) {
+            case 0:
+               cout << "Lovely ball by the bowler. It was so to the wicket.\n";
+               break;
+            case 1:
+               cout << "A well-judged single there. The batsman is looking to build a solid foundation.\n";
+               break;
+            case 2:
+               cout << "A flick off the pads and the batsmen scurry back for a comfortable couple.\n";
+               break;
+            case 3:
+               cout << "A powerful drive by the batsman and they manage to get three runs despite the fielder's efforts.\n";
+               break;
+            case 4:
+               cout << "That's a boundary! The batsman finds the gap and hits it with power.\n";
+               break;
+            case 5:
+               cout << "Oh, the ball's gone past the wicket-keeper! That's 5 bonus runs for the batting team!\n";
+               break;
+            case 6:
+               cout << "Wow, what a shot! The batsman made perfect contact and the ball disappears for a maximum.\n";
+               break;
+         }
       }
       balls_left--;
 
