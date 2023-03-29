@@ -150,7 +150,7 @@ int main() {
       } else {
          computer_run += computer_input;
 
-         switch (player_input) {
+         switch (computer_input) {
             case 0:
                cout << "Lovely ball by the bowler. It was so to the wicket.\n";
                break;
